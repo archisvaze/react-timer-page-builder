@@ -20,7 +20,7 @@ function TimerPage(props) {
     let [seconds, setSeconds] = useState(0);
     let [flag, setFlag] = useState(false)
     let countDownDate = new Date(date).getTime();
-
+// eslint-disable-next-line
     useEffect(() => {
         let remaining = 0;
         let timer = setTimeout(() => {
@@ -56,7 +56,6 @@ function TimerPage(props) {
 
     }, [])
     // eslint-disable-next-line
-
     if (flag === true) {
         return (
             <div className="tm-body" style={{ backgroundImage: `url(${wall1})` }}>
@@ -89,7 +88,7 @@ function TimerPage(props) {
             </div>
         )
     }
-
+    // eslint-disable-next-line
     else if (wallpaper == 1 && loading === false) {
         return (
             <div className="tm-body" style={{ backgroundImage: `url(${wall1})` }}>
