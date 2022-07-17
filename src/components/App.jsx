@@ -28,52 +28,51 @@ function App(props) {
 
         navigate('./TimerPage', { state: { "obj": obj } });
     }
-
     return (
 
         <>
-          
-                <div className="form-body">
-                    <div className="form-container">
-                        <div className="header">Build your Timer Page</div>
-                        <form className="form" onSubmit={handleSubmit}>
-                            <label className="label" htmlFor="headline">Main Headline</label>
-                            <input className="input" placeholder="" name="headline" type="text" onChange={event => setMainHeading(event.target.value)} value={mainHeading} required />
 
-                            <label className="label" htmlFor="second-headline">Secondary Headline</label>
-                            <input className="input" placeholder="" name="second-headline" type="text" onChange={event => setSecondHeading(event.target.value)} value={secondHeading} required />
+            <div className="form-body">
+                <div className="form-container">
+                    <div className="header">Build your Timer Page</div>
+                    <form className="form" onSubmit={handleSubmit}>
+                        <label className="label" htmlFor="headline">Main Headline</label>
+                        <input className="input" placeholder="" name="headline" type="text" onChange={event => setMainHeading(event.target.value)} value={mainHeading} required />
 
-                            <label className="label" htmlFor="subtext">Subtext</label>
-                            <input className="input" placeholder="" name="subtext" type="text" onChange={event => setSubText(event.target.value)} value={subText} required/>
+                        <label className="label" htmlFor="second-headline">Secondary Headline</label>
+                        <input className="input" placeholder="" name="second-headline" type="text" onChange={event => setSecondHeading(event.target.value)} value={secondHeading} required />
 
-                            <label className="label" htmlFor="button-text">Button Text</label>
-                            <input className="input" placeholder="" name="button-text" type="text" onChange={event => setButtonText(event.target.value)} value={buttonText} required/>
+                        <label className="label" htmlFor="subtext">Subtext</label>
+                        <input className="input" placeholder="" name="subtext" type="text" onChange={event => setSubText(event.target.value)} value={subText} required />
 
-                            <input type="datetime-local" className="timer"
-                                name="timer"
-                                min="2022-07-13T00:00" max="" onChange={event => setDate(event.target.value)} value={date} required/>
+                        <label className="label" htmlFor="button-text">Button Text</label>
+                        <input className="input" placeholder="" name="button-text" type="text" onChange={event => setButtonText(event.target.value)} value={buttonText} required />
 
-                            <div className="wallpaper-selector">
-                                <div className="wallpaper-container">
-                                    <label htmlFor="wallpaper"> <img src={wall1} alt="" className="wallpaper" /></label>
-                                    <input type="radio" name="wallpaper" id="" onChange={event => setWallpaper(event.target.value)} value={1} required/>
-                                </div>
-                                <div className="wallpaper-container">
-                                    <label htmlFor="wallpaper"> <img src={wall2} alt="" className="wallpaper" /></label>
-                                    <input type="radio" name="wallpaper" id="" onChange={event => setWallpaper(event.target.value)} value={2} />
-                                </div>
+                        <input type="datetime-local" className="timer"
+                            name="timer"
+                            min= "2022-07-13T00:00" max="2022-12-31T00:00" onChange={event => setDate(event.target.value)} value={date} required />
 
-
-
+                        <div className="wallpaper-selector">
+                            <div className="wallpaper-container">
+                                <label htmlFor="wallpaper"> <img src={wall1} alt="" className="wallpaper" /></label>
+                                <input type="radio" name="wallpaper" id="" onChange={event => setWallpaper(event.target.value)} value={1} required />
+                            </div>
+                            <div className="wallpaper-container">
+                                <label htmlFor="wallpaper"> <img src={wall2} alt="" className="wallpaper" /></label>
+                                <input type="radio" name="wallpaper" id="" onChange={event => setWallpaper(event.target.value)} value={2} />
                             </div>
 
-                            <button type="submit" id="start-button">Start Timer</button>
 
 
-                        </form>
+                        </div>
 
-                    </div>
+                        <button type="submit" id="start-button">Start Timer</button>
+
+
+                    </form>
+
                 </div>
+            </div>
         </>
 
 
