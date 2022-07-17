@@ -100,10 +100,10 @@ body {}
     height: 40px;
     padding: 10px;
     outline: none;
-    border: none;
+    border: 1px solid #bbbbbb;
     border-radius: 5px;
     margin-bottom: 30px;
-    background-color: #f1faee;
+    background-color: white;
 
 }
 
