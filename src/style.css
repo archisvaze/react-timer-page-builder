@@ -112,7 +112,8 @@ body {}
     width: 100px;
     height: 100px;
     object-fit: cover;
-    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .wallpaper-selector {
@@ -125,7 +126,8 @@ body {}
 .wallpaper-container {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 

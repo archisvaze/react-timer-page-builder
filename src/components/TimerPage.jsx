@@ -58,7 +58,7 @@ function TimerPage(props) {
     // eslint-disable-next-line
     if (flag === true) {
         return (
-            <div className="tm-body" style={{ backgroundImage: `url(${wall1})` }}>
+            <div className="tm-body">
 
                 <div className="tm-container">
                     

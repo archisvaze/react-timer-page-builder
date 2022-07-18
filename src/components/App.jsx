@@ -28,6 +28,7 @@ function App(props) {
 
         navigate('./TimerPage', { state: { "obj": obj } });
     }
+
     return (
 
         <>
@@ -50,16 +51,24 @@ function App(props) {
 
                         <input type="datetime-local" className="timer"
                             name="timer"
-                            min= "2022-07-13T00:00" max="2022-12-31T00:00" onChange={event => setDate(event.target.value)} value={date} required />
+                            min="2022-07-13T00:00" max="2022-12-31T00:00" onChange={event => setDate(event.target.value)} value={date} required />
 
                         <div className="wallpaper-selector">
-                            <div className="wallpaper-container">
-                                <label htmlFor="wallpaper"> <img src={wall1} alt="" className="wallpaper" /></label>
-                                <input type="radio" name="wallpaper" id="" onChange={event => setWallpaper(event.target.value)} value={1} required />
+                            <div className="wallpaper-container" style={{
+                                border: wallpaper === 1 ? '4px solid #3474f3' : 'none'
+                            }}>
+                                <img src={wall1} alt="" onClick={(e) => {
+                                    setWallpaper(1);
+                                }} className="wallpaper" />
+
                             </div>
-                            <div className="wallpaper-container">
-                                <label htmlFor="wallpaper"> <img src={wall2} alt="" className="wallpaper" /></label>
-                                <input type="radio" name="wallpaper" id="" onChange={event => setWallpaper(event.target.value)} value={2} />
+                            <div className="wallpaper-container" style={{
+                                border: wallpaper === 2 ? '4px solid #3474f3' : 'none'
+                            }}>
+                                <img src={wall2} alt="" className="wallpaper" onClick={() => {
+                                    setWallpaper(2)
+                                }} />
+
                             </div>
 
 
